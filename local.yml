@@ -1,0 +1,12 @@
+---
+- hosts: all
+  connection: local
+
+  tasks:
+    - name: run date in 2 minutes
+      at:
+        command: date
+        count: 2
+        units: minutes
+        unique: yes
+...
