@@ -5,13 +5,9 @@
   tasks:
     - name: run date in 2 minutes
       at:
-        command: /bin/date >/dev/null
+        command: logger '/bin/date >/dev/null'
         count: 2
         units: minutes
         unique: yes
-      register: result
 
-    - name: test at job ran
-      syslogger:
-        msg: "AT task ran with result= {{ result.stdout_lines }}"
 ...
