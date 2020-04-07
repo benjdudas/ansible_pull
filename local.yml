@@ -9,4 +9,9 @@
         count: 2
         units: minutes
         unique: yes
+      register: result
+
+    - name: test at job ran
+      syslogger:
+        msg: "AT task ran with result= {{ result.stdout_lines }}"
 ...
