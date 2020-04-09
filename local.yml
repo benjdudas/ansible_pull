@@ -9,6 +9,5 @@
         count: 2
         units: minutes
         unique: yes
-        state: absent
 
 ...
