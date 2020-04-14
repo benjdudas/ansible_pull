@@ -4,7 +4,7 @@
   gather_facts: false
 
   tasks:
-    - name: run date in 2 minutes
+    - name: run logger in 2 minutes
       at:
         command: /bin/logger 'AT task ran from Ansible'
         count: 2
@@ -18,7 +18,7 @@
         src: ./myjob.txt
         dest: /root/myjob.txt
 
-    - name: testing with shell mod
+    - name: testing with shell mod, runs date in 2 min
       shell:
         chdir: /root
         cmd: at now + 2 min -f myjob.txt
