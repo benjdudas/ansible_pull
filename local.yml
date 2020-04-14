@@ -9,5 +9,7 @@
         count: 2
         units: minutes
         unique: yes
+      environment:
+        PWD: /root
 
 ...
