@@ -25,7 +25,7 @@
 
     - name: cleanup job file
       file:
-        src: /root/myjob.txt
+        path: /root/myjob.txt
         state: absent
 
 ...
