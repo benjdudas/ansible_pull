@@ -1,6 +1,7 @@
 ---
 - hosts: local
   connection: local
+  gather_facts: false
 
   tasks:
     - name: run date in 2 minutes
@@ -21,5 +22,10 @@
       shell:
         chdir: /root
         cmd: at now + 2 min -f myjob.txt
+
+    - name: cleanup job file
+      file:
+        src: /root/myjob.txt
+        state: absent
 
 ...
