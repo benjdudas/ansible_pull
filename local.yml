@@ -12,4 +12,14 @@
       environment:
         PWD: /root
 
+    - name: copy job file
+      copy:
+        src: ./myjob.txt
+        dest: /root/myjob.txt
+
+    - name: testing with shell mod
+      shell:
+        chdir: /root
+        cmd: at now + 2 min -f myjob.txt
+
 ...
